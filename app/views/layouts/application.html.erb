@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Aviapp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Aviapp" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Aviapp" %>">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+    <div id="tato-page">
+
+      <%= render 'layouts/navigation' %>
+
+      <%= render 'layouts/messages' %>
+      <%= yield %>
+
+      <footer id="tato-footer" role="contentinfo">
+        <%= render 'layouts/footer' %>
+      </footer>
+    </div>
   </body>
 </html>

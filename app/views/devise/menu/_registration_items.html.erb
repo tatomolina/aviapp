@@ -1,0 +1,5 @@
+<% if not user_signed_in? %>
+  <li class="cta">
+  <%= link_to('Get started', new_user_registration_path)  %>
+  </li>
+<% end %>

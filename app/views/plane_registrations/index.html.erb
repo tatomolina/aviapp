@@ -1,0 +1,47 @@
+<h1 class="text-center">Registrations</h1>
+
+<br/><br/>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+      <table class="table table-hover text-center">
+        <tr>
+          <th class="text-center">Registration</th>
+          <th class="text-center">Manufacturer</th>
+          <th class="text-center">Model</th>
+          <th class="text-center">Power</th>
+          <th class="text-center">Year</th>
+          <th class="text-center">Class</th>
+        </tr>
+        <% if @plane_registrations.present? %>
+          <% @plane_registrations.each do |plane_registration| %>
+            <tr>
+              <td>
+                <%= plane_registration.registration %>
+              </td>
+              <td>
+                <%= plane_registration.plane.manufacturer %>
+              </td>
+              <td>
+                <%= plane_registration.plane.model %>
+              </td>
+              <td>
+                <%= plane_registration.power %>
+              </td>
+              <td>
+                <%= plane_registration.year %>
+              </td>
+              <td>
+                <%= plane_registration.plane_class.nick %>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+      </table>
+    <div class="text-center">
+      <p>
+        <%= link_to 'New Registration', new_plane_registration_path, class: "btn btn-default" %>
+      </p>
+    </div>
+  </div>
+</div>

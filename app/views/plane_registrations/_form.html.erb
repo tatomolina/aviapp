@@ -1,0 +1,44 @@
+<%= form_for @plane_registration do |form| %>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="form-group">
+      <br>
+      <div class="text-center">
+        <h3> <%= form.label :plane_id %> </h3>
+      </div>
+      <%= form.select(:plane_id, Plane.all.collect {|p| [ p.full_name, p.id ] }, {}, { multiple: false , class: "form-control" })%>
+      <br>
+      <div class="text-center">
+        <h3><%= form.label :prefix %></h3>
+      </div>
+      <%= form.text_field :prefix, class: "form-control text-center" %>
+      <br>
+      <div class="text-center">
+        <h3><%= form.label :suffix %></h3>
+      </div>
+      <%= form.text_field :suffix, class: "form-control text-center" %>
+      <br>
+      <div class="text-center">
+        <h3><%= form.label :year %></h3>
+      </div>
+      <%= form.text_field :year, class: "form-control text-center" %>
+      <br>
+      <div class="text-center">
+        <h3><%= form.label :power %></h3>
+      </div>
+      <%= form.text_field :power, class: "form-control text-center" %>
+      <br>
+      <div class="text-center">
+        <h3> <%= form.label "Plane Class" %> </h3>
+      </div>
+      <%= form.select(:plane_class_id, PlaneClass.all.collect {|p| [ p.name, p.id ] }, {}, { multiple: false , class: "form-control" })%>
+
+      <br/>
+      <div class="text-center">
+        <%= form.submit :class => "btn btn-default" %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

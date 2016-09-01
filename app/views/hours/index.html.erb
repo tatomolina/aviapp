@@ -1,0 +1,51 @@
+<h1 class="text-center">Hours</h1>
+
+<br/><br/>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+      <table class="table table-hover text-center">
+        <tr>
+          <th class="text-center">Date</th>
+          <th class="text-center">Start Time</th>
+          <th class="text-center">End Time</th>
+          <th class="text-center">Time of Flight</th>
+          <th class="text-center">Registration</th>
+          <th class="text-center">Purpose Flight</th>
+          <th class="text-center">Landings</th>
+        </tr>
+        <% if @hours.present? %>
+          <% @hours.each do |hour| %>
+            <tr>
+              <td>
+                <%= hour.date %>
+              </td>
+              <td>
+                <%= hour.start_time.to_s(:time)  %>
+              </td>
+              <td>
+                <%= hour.end_time.to_s(:time)  %>
+              </td>
+              <td>
+                <%= hour.time_of_flight  %>
+              </td>
+              <td>
+                <%= hour.plane_registration.registration %>
+              </td>
+              <td>
+                <%= hour.purpose_flight.nick %>
+              </td>
+              <td>
+                <%= hour.landings %>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+      </table>
+    <div class="text-center">
+      <p>
+        <%= link_to 'New Hour', new_hour_path, class: "btn btn-default" %>
+      </p>
+    </div>
+  </div>
+</div>

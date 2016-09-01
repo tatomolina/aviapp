@@ -1,7 +1,27 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+admin = User.create(email: "admin@admin.com", password: "adminadmin", password_confirmation: "adminadmin")
+admin.add_role :admin
+
+PlaneClass.create(name: "Monomotores terrestres", nick: "MONT-T")
+PlaneClass.create(name: "Multimotores terrestres", nick: "MULT-T")
+PlaneClass.create(name: "Monomotores acuaticos", nick: "MONT-A")
+PlaneClass.create(name: "Multimotores acuaticos", nick: "MULT-A")
+
+PurposeFlight.create(name: "Taxi aéreo", nick: "TAXI")
+PurposeFlight.create(name: "Line aérea", nick: "LA")
+PurposeFlight.create(name: "Vuelo privado", nick: "VP")
+PurposeFlight.create(name: "Entrenamiento", nick: "ENT")
+PurposeFlight.create(name: "Instrucción", nick: "INST")
+PurposeFlight.create(name: "Instructor", nick: "I")
+PurposeFlight.create(name: "Prueva de aviones", nick: "PA")
+PurposeFlight.create(name: "Inspector", nick: "IP")
+PurposeFlight.create(name: "Adaptación", nick: "ADAP")
+PurposeFlight.create(name: "Readaptación", nick: "READ")
+PurposeFlight.create(name: "Remolque de planeadores", nick: "RP")
+PurposeFlight.create(name: "Sanitario", nick: "SAN")
+PurposeFlight.create(name: "Acrobacia", nick: "ACR")
+PurposeFlight.create(name: "Examen", nick: "EXA")
+PurposeFlight.create(name: "Fotografía", nick: "FOT")
+PurposeFlight.create(name: "Formación", nick: "FOR")
+PurposeFlight.create(name: "Aeroaplicación", nick: "AER")
+PurposeFlight.create(name: "Vuelo Oficial", nick: "VO")
+PurposeFlight.create(name: "Lanzamiento de paracaidistas", nick: "LP")

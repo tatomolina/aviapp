@@ -1,0 +1,32 @@
+<h1 class="text-center">Planes</h1>
+
+<br/><br/>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+      <table class="table table-hover text-center">
+        <tr>
+          <th class="text-center">Manufacturer</th>
+          <th class="text-center">Model</th>
+          <th></th>
+        </tr>
+        <% if @planes.present? %>
+          <% @planes.each do |plane| %>
+            <tr>
+              <td>
+                <%= plane.manufacturer %>
+              </td>
+              <td>
+                <%= plane.model %>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+      </table>
+    <div class="text-center">
+      <p>
+        <%= link_to 'New Plane', new_plane_path, class: "btn btn-default" %>
+      </p>
+    </div>
+  </div>
+</div>

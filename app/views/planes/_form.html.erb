@@ -1,0 +1,21 @@
+<%= form_for @plane do |form| %>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="form-group">
+      <div class="text-center">
+        <h3><%= form.label :manufacturer %></h3>
+      </div>
+      <%= form.text_field :manufacturer, class: "form-control text-center" %>
+      <div class="text-center">
+        <h3><%= form.label :model %></h3>
+      </div>
+      <%= form.text_field :model, class: "form-control text-center" %>
+      <br/>
+      <div class="text-center">
+        <%= form.submit :class => "btn btn-default" %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
