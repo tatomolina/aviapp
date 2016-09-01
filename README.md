@@ -1,24 +1,22 @@
-# README
+# Aviapp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Realese](https://img.shields.io/badge/release-0.0.1-green.svg)]
+[![Build Status](https://img.shields.io/badge/build-passing-green.svg)]
+[![Dependency Status](https://img.shields.io/badge/dependencies-up--to--date-green.svg)]
 
-Things you may want to cover:
+Aviapp is a Rails app that provides an easy-to-use interface for managing your flight hours.
 
-* Ruby version
+## Features
+* Keep track of all your flight hours
+* Custom actions
+* Search and filtering
+* Authentication (via [Devise](https://github.com/plataformatec/devise) or other)
+* Authorization (via [Pundit](https://github.com/elabs/pundit))
 
-* System dependencies
+## Open
+An Open Source project. Available at https://aviapp.herokuapp.com/ Feel free to contribute and please report bugs if you find any.
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Support
+If you have a question, please check this README, the wiki, and the [list of
+known issues][troubleshoot].
