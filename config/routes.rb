@@ -5,5 +5,9 @@ Rails.application.routes.draw do
   resources :hours
   resources :plane_registrations
 
+  authenticated :user do
+    #root 'root_assignment#assign_root', as: :authenticated_root
+  end
+
   root 'static_pages#unauthenticated'
 end
